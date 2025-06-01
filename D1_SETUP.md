@@ -136,7 +136,8 @@ Add these scripts to your `package.json`:
     "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "wrangler d1 migrations apply my-database-name --local",
-    "db:migrate:prod": "wrangler d1 migrations apply my-database-name",
+    "db:migrate:prod": "wrangler d1 migrations apply my-database-name --remote",
+    "db:status": "wrangler d1 migrations status my-database-name",
     "db:create": "wrangler d1 create my-database-name"
   }
 }
